@@ -1,0 +1,13 @@
+<h2>{{anime?.attributes.titles.en || anime?.attributes.titles.en_jp || anime?.attributes.titles.ja_jp}}</h2>
+<p>{{anime?.attributes.synopsis}}</p>
+<mat-tab-group>
+<mat-tab form-field>
+  <mat-tab label>Choose List</mat-tab>
+  <mat-tab select [(value)]="selectedList">
+    <mat-tab option value="currentlyWatching">Currently Watching</mat-tab>
+    <mat-tab option value="wanted">Wanted</mat-tab>
+    <mat-tab option value="watched">Watched</mat-tab>
+  </mat-tab>
+</mat-tab>
+</mat-tab-group>
+<button mat-raised-button color="primary" (click)="addToList()">Add to List</button>

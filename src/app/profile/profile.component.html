@@ -1,0 +1,14 @@
+<h2>User Profile</h2>
+<form (ngSubmit)="updateProfile()">
+<mat-tab-group>
+  <mat-tab form-field>
+    <mat-tab label>Username</mat-tab>
+    <input matInput [(ngModel)]="user.username" name="username">
+  </mat-tab>
+  <mat-tab form-field>
+    <mat-tab label>Email</mat-tab>
+    <input matInput [(ngModel)]="user.email" name="email">
+  </mat-tab>
+  <button mat-raised-button color="primary" type="submit">Update Profile</button>
+</mat-tab-group>
+</form>

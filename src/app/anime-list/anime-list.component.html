@@ -1,0 +1,21 @@
+<h2>My Anime List</h2>
+<mat-tab-group>
+  <mat-tab label="Currently Watching">
+    <div *ngFor="let anime of currentlyWatching">
+      {{ anime.title }}
+      <button mat-button (click)="removeAnimeFromList('currentlyWatching', anime.id)">Remove</button>
+    </div>
+  </mat-tab>
+  <mat-tab label="Wanted">
+    <div *ngFor="let anime of wanted">
+      {{ anime.title }}
+      <button mat-button (click)="removeAnimeFromList('wanted', anime.id)">Remove</button>
+    </div>
+  </mat-tab>
+  <mat-tab label="Watched">
+    <div *ngFor="let anime of watched">
+      {{ anime.title }}
+      <button mat-button (click)="removeAnimeFromList('watched', anime.id)">Remove</button>
+    </div>
+  </mat-tab>
+</mat-tab-group>

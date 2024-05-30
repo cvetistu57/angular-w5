@@ -1,0 +1,14 @@
+<h2>Search Anime</h2>
+<mat-tab-group>
+<mat-tab form-field>
+  <mat-tab label>Search</mat-tab>
+  <input matInput (keyup)="search($event.target.value)">
+</mat-tab>
+<div *ngIf="results.length">
+  <mat-tab list>
+    <mat-tab list-item *ngFor="let anime of results" [routerLink]="['/anime', anime.id]">
+      {{anime.attributes.titles.en || anime.attributes.titles.en_jp || anime.attributes.titles.ja_jp}}
+    </mat-tab>
+  </mat-tab>
+</div>
+</mat-tab-group>
